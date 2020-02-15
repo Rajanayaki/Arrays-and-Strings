@@ -1,0 +1,22 @@
+string=input() 
+count=0
+auxlist=[ ]
+cstring=""
+for i in range(len(string)):
+  if len(auxlist)<1:
+    auxlist.append(string[i])
+    count=1
+  else:
+    if auxlist[-1]==string[i]:
+      count+=1
+      auxlist.append(string[i])
+    else:
+      cstring+=auxlist[-1]+str(count)
+      auxlist.append(string[i])
+      count=1
+if count>0:
+  cstring+=auxlist[-1]+str(count)
+if len(cstring)<len(string):
+  print(cstring)
+else:
+  print(string)
