@@ -1,0 +1,21 @@
+string1=input()
+string2=input()
+if len(string1)!=len(string2):
+  print("no")
+  exit()
+hashMap={}
+hashMap1={}
+for i in range(len(string1)):
+  if string1[i] not in hashMap:
+    hashMap[string1[i]]=1
+  else:
+    hashMap[string1[i]]+=1
+for i in range(len(string2)):
+  if string2[i] not in hashMap1:
+    hashMap1[string2[i]]=1
+  else:
+    hashMap[string2[i]]+=1
+if hashMap==hashMap1:
+  print("yes")
+else:
+  print("no")
