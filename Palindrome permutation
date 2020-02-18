@@ -1,0 +1,13 @@
+string=input()
+charlist=[]
+length=len(string)
+for i in range(len(string)):
+  if string[i] in charlist:
+    charlist.pop(charlist.index(string[i]))
+  else:
+    charlist.append(string[i])
+lengthoflist=len(charlist)
+if (length%2==0 and lengthoflist==0) or  (length%2!=0 and lengthoflist==1):
+  print("True")
+else:
+  print("False")
