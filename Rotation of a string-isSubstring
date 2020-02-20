@@ -1,0 +1,13 @@
+def isSubstring(string1,string2):
+  if string1.index(string2):
+    return True
+  else:
+    return False
+string1=input()
+string2=input()
+string3=string1+string2
+status=isSubstring(string3,string2)
+if status:
+  print("yes")
+else:
+  print("No")
