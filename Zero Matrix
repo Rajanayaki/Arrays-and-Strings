@@ -1,0 +1,22 @@
+def printmatrix(mat,rowsize,colsize):
+  for i in range(rowsize):
+    for j in range(colsize):
+      print(mat[i][j],end=" ")
+    print(" ")
+  
+rowsize=int(input())
+colsize=int(input())
+mat=[]
+for i in range(rowsize):   
+    mat.append(list(map(int,input().split())))
+temprow,tempcol=[None]*rowsize,[None]*colsize
+for i in range(rowsize):
+  for j in range(colsize):
+    if mat[i][j]==0:
+      temprow[i]=0
+      tempcol[j]=0
+for i in range(rowsize):
+  for j in range(colsize):
+    if temprow[i]==0 or tempcol[j]==0:
+      mat[i][j]=0
+printmatrix(mat,rowsize,colsize)
